@@ -1,0 +1,24 @@
+name: Release Addon
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Make ZIP
+        run: |
+          mkdir -p release
+          zip -r release/aseprite-importer.zip aseprite-importer
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/aseprite-importer.zip
