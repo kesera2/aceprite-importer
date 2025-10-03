@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+
+id = "aseprite_importer"
+version = "0.1.0"
+name = "Aseprite Importer"
+tagline = "Import Aseprite files as pixel mesh with solidify modifier"
+maintainer = "kesera2"
+type = "add-on"
+
+website = "https://github.com/kesera2/aceprite-importer"
+tags = ["Import-Export", "Mesh", "Aseprite"]
+
+blender_version_min = "4.2.0"
+license = ["MIT"]
