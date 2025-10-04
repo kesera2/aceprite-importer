@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/kesera2/aseprite-importer-for-blender/compare/v1.0.0...v1.1.0) (2025-10-04)
+
+
+### Features
+
+* add frame selection and auto-detection features ([7c0a8f5](https://github.com/kesera2/aseprite-importer-for-blender/commit/7c0a8f5f214d7eaa7094c78229bb66f62beb640c))
+
 ## 1.0.0 (2025-10-04)
 
 
