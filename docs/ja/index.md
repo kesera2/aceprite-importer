@@ -10,6 +10,9 @@ hero:
     alt: Aseprite Importer
   actions:
     - theme: brand
+      text: 最新リリースをダウンロード
+      link: https://github.com/kesera2/aseprite-importer-for-blender/releases/latest
+    - theme: alt
       text: はじめる
       link: /ja/guide/installation
     - theme: alt
