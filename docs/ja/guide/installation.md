@@ -29,7 +29,7 @@
    - macOS: `/Applications/Aseprite.app/Contents/MacOS/aseprite`
    - Linux: `/usr/bin/aseprite` または `~/.steam/steam/steamapps/common/Aseprite/aseprite`
 
-![プリファレンス](aseprite-importer-for-blender-preference.png)
+![プリファレンス](/aseprite-importer-for-blender-preference.png)
 
 ### 4. オプション設定
 
