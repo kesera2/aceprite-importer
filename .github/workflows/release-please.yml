@@ -1,0 +1,37 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          release-type: simple
+          package-name: aseprite-importer
+
+      # Package and upload the addon when a release is created
+      - name: Checkout source
+        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v4
+
+      - name: Create addon ZIP
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          zip -r aseprite-importer-${{ steps.release.outputs.tag_name }}.zip aseprite-importer
+
+      - name: Upload Release Asset
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ steps.release.outputs.tag_name }} aseprite-importer-${{ steps.release.outputs.tag_name }}.zip

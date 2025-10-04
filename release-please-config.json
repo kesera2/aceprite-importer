@@ -1,0 +1,16 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "aseprite-importer",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "aseprite-importer/blender_manifest.toml",
+          "jsonpath": "$.version"
+        }
+      ]
+    }
+  }
+}
