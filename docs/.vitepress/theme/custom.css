@@ -1,34 +1,17 @@
-/* Logo glow effect */
-.VPNavBarTitle .logo {
-  filter: drop-shadow(0 0 8px rgba(134, 239, 172, 0.5));
-  transition: filter 0.3s ease;
-}
-
-.VPNavBarTitle .logo:hover {
-  filter: drop-shadow(0 0 12px rgba(134, 239, 172, 0.8));
-}
-
-/* Sidebar title gradient */
-.VPSidebarItem.level-0 .text,
-.VPDocOutlineItem a {
-  background: linear-gradient(135deg, #86efac 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-}
-
-/* Hero title gradient (homepage) */
-.VPHero .name {
-  background: linear-gradient(135deg, #86efac 0%, #10b981 50%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* Hero image glow */
-.VPHero .image-bg {
-  filter: drop-shadow(0 0 20px rgba(134, 239, 172, 0.4));
+.VPImage.image-src {
+  filter:
+    drop-shadow(-15px -15px 30px #84fbffcc)
+    drop-shadow(15px 15px 40px #99d13fcc);
+  transform: scale(1.5) translate(-60px, -20px);
+}
+
+/* Hero title gradient */
+.VPHero .name {
+  background: linear-gradient(-45deg, #1ea0a5 20%, #bcdf6a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Custom green accent color */
