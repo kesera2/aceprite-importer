@@ -1,5 +1,11 @@
 ![Aseprite Importer](aseprite-importer-logo.gif)
 
+<div align="right">
+
+[English](README.md) | [日本語](README.ja.md)
+
+</div>
+
 # 🎨 Aseprite Importer
 
 ✨ AsepriteファイルをBlenderにピクセルメッシュとしてインポートし、Solidifyモディファイアを適用します。

@@ -1,5 +1,11 @@
 ![Aseprite Importer](aseprite-importer-logo.gif)
 
+<div align="right">
+
+[English](README.md) | [日本語](README.ja.md)
+
+</div>
+
 # 🎨 Aseprite Importer
 
 ✨ Import Aseprite files as pixel mesh with solidify modifier in Blender.
