@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Aseprite Importer",
     "author": "kesera2",
-    "version": (0, 1, 0),
+    "version": (1, 0, 0),
     "blender": (2, 93, 0),
     "location": "File > Import > Aseprite (.aseprite)",
     "description": "Import an Aseprite file as pixel mesh with solidify modifier",
