@@ -60,7 +60,7 @@ The add-on sets texture interpolation to "Closest" by default for pixel-perfect 
 
 ### Can I disable the Solidify modifier?
 
-Yes, in `Edit > Preferences > Add-ons > Aseprite Importer`, uncheck "Add Solidify Modifier".
+Yes, when importing a file, uncheck "Add Solidify Modifier" in the import dialog options.
 
 ### What is the texture prefix setting for?
 

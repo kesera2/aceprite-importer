@@ -23,18 +23,23 @@ Download the latest `aseprite-importer.zip` from the [Releases page](https://git
 
 ### 3. Configure Aseprite Path
 
+The add-on will automatically detect your Aseprite installation on first use. To verify or change the path:
+
 1. In the Add-ons preferences, expand "Aseprite Importer"
-2. Set the **Aseprite Executable Path** to your Aseprite installation:
-   - Windows: `C:\Program Files\Aseprite\Aseprite.exe` (default)
+2. Check the **Status** indicator:
+   - ✓ **Aseprite executable found**: The path is correctly configured
+   - ✗ **Aseprite executable not found**: You need to set the correct path
+
+3. If needed, manually set the **Aseprite Executable Path**:
+   - Windows: `C:\Program Files\Aseprite\Aseprite.exe` (default) or `C:\Program Files (x86)\Steam\steamapps\common\Aseprite\Aseprite.exe` (Steam)
    - macOS: `/Applications/Aseprite.app/Contents/MacOS/aseprite`
-   - Linux: `/usr/bin/aseprite` or `~/.steam/steam/steamapps/common/Aseprite/aseprite`
+   - Linux: `/usr/bin/aseprite` or `~/.steam/steam/steamapps/common/Aseprite/aseprite` (Steam)
 
 ![Preferences](/aseprite-importer-for-blender-preference.png)
 
-### 4. Optional Settings
-
-- **Add Solidify Modifier**: Enable/disable automatic Solidify modifier (default: enabled)
-- **Texture Prefix**: Set prefix for exported texture files (default: `tex_`)
+::: tip Auto-Detection
+The add-on automatically searches common installation locations. If Aseprite is installed in a non-standard location, you'll need to set the path manually.
+:::
 
 ## Verification
 
@@ -47,9 +52,10 @@ To verify the installation:
 ### "Aseprite not found" Error
 
 If you get this error:
-1. Check that Aseprite is installed
-2. Verify the path in Add-on preferences is correct
-3. On macOS/Linux, ensure the executable has proper permissions
+1. Check the **Status** indicator in Add-on preferences
+2. If the status shows "not found", verify that Aseprite is installed
+3. Check the expected locations listed in the preferences panel
+4. On macOS/Linux, ensure the executable has proper permissions
 
 ### Add-on Not Appearing
 

@@ -7,8 +7,20 @@
 1. Open Blender
 2. Go to `File > Import > Aseprite (.aseprite)`
 3. Navigate to your `.aseprite` file
-4. Click `Import Aseprite as Mesh`
-5. The mesh will be created at the world origin with texture applied
+4. Configure import options in the sidebar (optional):
+
+![Import Dialog](/blender-file-view.png)
+
+   - **Frame Number**: Which frame to import from multi-frame files (default: 0)
+   - **Add Solidify Modifier**: Automatically add Solidify modifier (default: enabled)
+   - **Solidify Thickness**: Thickness of the 3D depth in meters (default: 0.1m)
+   - **Texture Prefix**: Prefix for exported texture files (default: `tex_`)
+
+5. Click `Import Aseprite as Mesh`
+6. The mesh will be created at the world origin with texture applied
+
+![Sample Import Result](/sample.png)
+*Example: Imported Aseprite file as 3D mesh with Solidify modifier in Material Preview mode*
 
 ### What Gets Created
 
@@ -31,8 +43,8 @@ When you import an Aseprite file, the add-on automatically:
 
 ### Solidify Modifier
 
-If enabled in preferences, the Solidify modifier:
-- **Thickness**: 0.1 units (adjustable in modifier panel)
+If enabled in the import dialog, the Solidify modifier:
+- **Thickness**: Default 0.1 units (configurable in import dialog, adjustable after import in modifier panel)
 - **Offset**: 1.0 (extrudes outward)
 - **Rim**: Enabled (creates side faces)
 
@@ -40,7 +52,7 @@ You can modify these settings after import in the Modifiers panel.
 
 ### Texture
 
-The texture is temporarily exported as PNG in Blender's temp directory with the prefix specified in preferences (default: `tex_`).
+The texture is temporarily exported as PNG in Blender's temp directory with the prefix specified in the import dialog (default: `tex_`).
 
 ## Tips and Tricks
 

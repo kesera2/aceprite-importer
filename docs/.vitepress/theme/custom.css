@@ -26,3 +26,8 @@
   --vp-c-brand-2: #10b981;
   --vp-c-brand-3: #059669;
 }
+
+/* Sidebar width adjustment */
+:root {
+  --vp-sidebar-width: 400px !important;
+}
