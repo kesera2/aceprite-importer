@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: Get Started
       link: /guide/installation
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/kesera2/aseprite-importer-for-blender
 
 features:
   - icon: 📥

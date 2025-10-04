@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: はじめる
       link: /ja/guide/installation
-    - theme: alt
-      text: GitHub
-      link: https://github.com/kesera2/aseprite-importer-for-blender
 
 features:
   - icon: 📥

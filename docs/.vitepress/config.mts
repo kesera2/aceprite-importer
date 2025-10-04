@@ -14,8 +14,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide/' },
-          { text: 'GitHub', link: 'https://github.com/kesera2/aseprite-importer-for-blender' }
+          { text: 'Guide', link: '/guide/' }
         ],
         sidebar: [
           {
@@ -35,8 +34,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'ホーム', link: '/ja/' },
-          { text: 'ガイド', link: '/ja/guide/' },
-          { text: 'GitHub', link: 'https://github.com/kesera2/aseprite-importer-for-blender' }
+          { text: 'ガイド', link: '/ja/guide/' }
         ],
         sidebar: [
           {
