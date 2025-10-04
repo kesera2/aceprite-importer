@@ -167,20 +167,20 @@ def register():
     # 既存のクラスを削除
     try:
         bpy.utils.unregister_class(AsepriteImporterPreferences)
-    except:
-        pass
+    except Exception as e:
+        print(f"Warning: Could not unregister AsepriteImporterPreferences: {e}")
     try:
         bpy.utils.unregister_class(ImportAseprite)
-    except:
-        pass
+    except Exception as e:
+        print(f"Warning: Could not unregister ImportAseprite: {e}")
 
     # すべての同名の関数を削除
     for func in list(bpy.types.TOPBAR_MT_file_import._dyn_ui_initialize()):
         if hasattr(func, '__name__') and func.__name__ == 'menu_func_import':
             try:
                 bpy.types.TOPBAR_MT_file_import.remove(func)
-            except:
-                pass
+            except Exception as e:
+                print(f"Warning: Could not remove menu_func_import: {e}")
 
     bpy.utils.register_class(AsepriteImporterPreferences)
     bpy.utils.register_class(ImportAseprite)
@@ -189,16 +189,16 @@ def register():
 def unregister():
     try:
         bpy.utils.unregister_class(ImportAseprite)
-    except:
-        pass
+    except Exception as e:
+        print(f"Warning: Could not unregister ImportAseprite: {e}")
     try:
         bpy.utils.unregister_class(AsepriteImporterPreferences)
-    except:
-        pass
+    except Exception as e:
+        print(f"Warning: Could not unregister AsepriteImporterPreferences: {e}")
     try:
         bpy.types.TOPBAR_MT_file_import.remove(menu_func_import)
-    except:
-        pass
+    except Exception as e:
+        print(f"Warning: Could not remove menu_func_import: {e}")
 
 if __name__ == "__main__":
     register()
