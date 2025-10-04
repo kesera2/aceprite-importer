@@ -54,7 +54,5 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kesera2/aseprite-importer-for-blender' }
     ]
-  },
-
-  base: '/aseprite-importer-for-blender/'
+  }
 })
