@@ -12,10 +12,39 @@ import bpy
 import os
 import subprocess
 from bpy_extras.io_utils import ImportHelper
-from bpy.props import StringProperty
+from bpy.props import StringProperty, BoolProperty
 import bmesh
 
-ASEPRITE_PATH = r"C:\Program Files\Aseprite\Aseprite.exe"
+class AsepriteImporterPreferences(bpy.types.AddonPreferences):
+    bl_idname = __name__
+
+    aseprite_path: StringProperty(
+        name="Aseprite Executable Path",
+        description="Path to Aseprite executable",
+        default=r"C:\Program Files\Aseprite\Aseprite.exe",
+        subtype='FILE_PATH',
+        maxlen=1024
+    )
+
+    add_solidify: BoolProperty(
+        name="Add Solidify Modifier",
+        description="Automatically add Solidify modifier to imported meshes",
+        default=True
+    )
+
+    texture_prefix: StringProperty(
+        name="Texture Prefix",
+        description="Prefix for exported texture files",
+        default="tex_",
+        maxlen=64
+    )
+
+    def draw(self, context):
+        layout = self.layout
+        layout.label(text="Aseprite Settings:")
+        layout.prop(self, "aseprite_path")
+        layout.prop(self, "add_solidify")
+        layout.prop(self, "texture_prefix")
 
 class ImportAseprite(bpy.types.Operator, ImportHelper):
     """Import an Aseprite file and convert to mesh"""
@@ -31,14 +60,18 @@ class ImportAseprite(bpy.types.Operator, ImportHelper):
     )
 
     def execute(self, context):
+        # プリファレンスからAsepriteのパスを取得
+        preferences = context.preferences.addons[__name__].preferences
+        aseprite_path = preferences.aseprite_path
+
         # 1. AsepriteファイルをPNGに変換
         aseprite_file = os.path.abspath(self.filepath)
         file_name = os.path.splitext(os.path.basename(aseprite_file))[0]
         tmp_dir = bpy.app.tempdir
-        png_path = os.path.join(tmp_dir, f"tex_{file_name}.png")
+        png_path = os.path.join(tmp_dir, f"{preferences.texture_prefix}{file_name}.png")
 
         result = subprocess.run(
-            [ASEPRITE_PATH, "-b", aseprite_file, "--save-as", png_path],
+            [aseprite_path, "-b", aseprite_file, "--save-as", png_path],
             capture_output=True, text=True
         )
 
@@ -117,12 +150,13 @@ class ImportAseprite(bpy.types.Operator, ImportHelper):
         bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_MASS', center='MEDIAN')
         obj.location = (0, 0, 0)
 
-        # Solidifyモディファイアを追加
-        solid = obj.modifiers.new("Solidify", 'SOLIDIFY')
-        solid.thickness = 0.1
-        solid.offset = 1.0  # 外側に厚みを出す（-1.0で内側）
-        solid.use_rim = True  # 側面を生成
-        solid.use_rim_only = False
+        # Solidifyモディファイアを追加（プリファレンスで有効な場合のみ）
+        if preferences.add_solidify:
+            solid = obj.modifiers.new("Solidify", 'SOLIDIFY')
+            solid.thickness = 0.1
+            solid.offset = 1.0  # 外側に厚みを出す（-1.0で内側）
+            solid.use_rim = True  # 側面を生成
+            solid.use_rim_only = False
 
         return {'FINISHED'}
 
@@ -131,6 +165,10 @@ def menu_func_import(self, context):
 
 def register():
     # 既存のクラスを削除
+    try:
+        bpy.utils.unregister_class(AsepriteImporterPreferences)
+    except:
+        pass
     try:
         bpy.utils.unregister_class(ImportAseprite)
     except:
@@ -144,12 +182,17 @@ def register():
             except:
                 pass
 
+    bpy.utils.register_class(AsepriteImporterPreferences)
     bpy.utils.register_class(ImportAseprite)
     bpy.types.TOPBAR_MT_file_import.append(menu_func_import)
 
 def unregister():
     try:
         bpy.utils.unregister_class(ImportAseprite)
+    except:
+        pass
+    try:
+        bpy.utils.unregister_class(AsepriteImporterPreferences)
     except:
         pass
     try:
