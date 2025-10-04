@@ -3,6 +3,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Aseprite Importer for Blender',
   description: 'Import Aseprite files as 3D pixel mesh in Blender',
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+  ],
 
   locales: {
     root: {
@@ -53,6 +56,10 @@ export default defineConfig({
     logo: '/aseprite-importer-logo.gif',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kesera2/aseprite-importer-for-blender' }
-    ]
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2025 kesera2'
+    }
   }
 })

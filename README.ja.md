@@ -1,4 +1,4 @@
-![Aseprite Importer](aseprite-importer-logo.gif)
+![Aseprite Importer](https://aseprite-importer.kesera2.dev/aseprite-importer-logo.gif)
 
 <div align="right">
 
