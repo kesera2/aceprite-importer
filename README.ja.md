@@ -6,7 +6,7 @@
 
 </div>
 
-# 🎨 Aseprite Importer
+# 🎨 Aseprite Importer for Blender
 
 ✨ AsepriteファイルをBlenderにピクセルメッシュとしてインポートし、Solidifyモディファイアを適用します。
 

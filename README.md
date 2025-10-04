@@ -6,7 +6,7 @@
 
 </div>
 
-# 🎨 Aseprite Importer
+# 🎨 Aseprite Importer for Blender
 
 ✨ Import Aseprite files as pixel mesh with solidify modifier in Blender.
 
