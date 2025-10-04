@@ -1,10 +1,19 @@
-![Aseprite Importer](https://aseprite-importer.kesera2.dev/aseprite-importer-logo.gif)
-
 <div align="right">
 
 [English](README.md) | [日本語](README.ja.md)
 
 </div>
+
+![Aseprite Importer](https://aseprite-importer.kesera2.dev/aseprite-importer-logo.gif)
+
+<div align="center">
+
+[![GitHub release](https://img.shields.io/github/v/release/kesera2/aseprite-importer-for-blender)](https://github.com/kesera2/aseprite-importer-for-blender/releases)
+[![License](https://img.shields.io/github/license/kesera2/aseprite-importer-for-blender)](LICENSE)
+[![Blender](https://img.shields.io/badge/Blender-2.93%2B-orange)](https://www.blender.org/)
+
+</div>
+
 
 # 🎨 Aseprite Importer for Blender
 
