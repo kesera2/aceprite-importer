@@ -22,6 +22,8 @@
 
 ✨ AsepriteファイルをBlenderにピクセルメッシュとしてインポートし、Solidifyモディファイアを適用します。
 
+📚 **[ドキュメントサイトを見る](https://aseprite-importer.kesera2.dev/ja/)** 詳細なガイドとチュートリアルはこちら。
+
 ## ⭐ 機能
 
 - 📥 `.aseprite`ファイルを直接Blenderにインポート

@@ -19,6 +19,8 @@
 
 ✨ Import Aseprite files as pixel mesh with solidify modifier in Blender.
 
+📚 **[Visit Documentation Site](https://aseprite-importer.kesera2.dev)** for detailed guides and tutorials.
+
 ## ⭐ Features
 
 - 📥 Import `.aseprite` files directly into Blender
