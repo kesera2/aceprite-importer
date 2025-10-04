@@ -5,6 +5,22 @@
 # Claude Code
 .claude/
 
+# Node
+node_modules/
+dist/
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+.yarn-integrity
+.npm
+.eslintcache
+
+# VitePress
+docs/.vitepress/cache
+docs/.vitepress/dist
+.temp
+.cache
+
 # Python
 __pycache__/
 *.py[cod]

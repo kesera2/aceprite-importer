@@ -1,0 +1,26 @@
+{
+  "name": "aceprite-importer",
+  "version": "1.0.0",
+  "description": "![Aseprite Importer](aseprite-importer-logo.gif)",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kesera2/aseprite-importer-for-blender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kesera2/aseprite-importer-for-blender/issues"
+  },
+  "homepage": "https://github.com/kesera2/aseprite-importer-for-blender#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
