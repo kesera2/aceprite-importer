@@ -26,6 +26,12 @@
 
 ![サンプル](docs/public/sample.png)
 
+## 🎬 デモ
+
+Asepriteモデルのインポートから表示までの流れをご覧ください：
+
+[![デモ動画](https://img.youtube.com/vi/YXedOP_Rbb4/maxresdefault.jpg)](https://youtu.be/YXedOP_Rbb4)
+
 ## ⭐ 機能
 
 - 📥 `.aseprite`ファイルを直接Blenderにインポート

@@ -23,6 +23,12 @@
 
 ![Sample](docs/public/sample.png)
 
+## 🎬 Demo
+
+Watch how to import and display your Aseprite models:
+
+[![Demo Video](https://img.youtube.com/vi/YXedOP_Rbb4/maxresdefault.jpg)](https://youtu.be/YXedOP_Rbb4)
+
 ## ⭐ Features
 
 - 📥 Import `.aseprite` files directly into Blender

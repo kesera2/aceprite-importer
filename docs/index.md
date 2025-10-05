@@ -13,6 +13,9 @@ hero:
       text: Download Latest Release
       link: https://github.com/kesera2/aseprite-importer-for-blender/releases/latest
     - theme: alt
+      text: Watch Demo
+      link: https://youtu.be/YXedOP_Rbb4
+    - theme: alt
       text: Get Started
       link: /guide/installation
 

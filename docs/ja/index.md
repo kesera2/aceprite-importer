@@ -13,6 +13,9 @@ hero:
       text: 最新リリースをダウンロード
       link: https://github.com/kesera2/aseprite-importer-for-blender/releases/latest
     - theme: alt
+      text: デモを見る
+      link: https://youtu.be/YXedOP_Rbb4
+    - theme: alt
       text: はじめる
       link: /ja/guide/installation
 
